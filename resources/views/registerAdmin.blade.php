@@ -55,7 +55,7 @@
         class="px-4 w-80 px-4 border-blue border-2 text-center p-4 m-auto  rounded-xl"
       >
       @csrf
-      <h1 class="font-semibold text-xl text-blue">Register</h1>
+      <h1 class="font-semibold text-xl text-blue">Admin Register</h1>
       <p>
         <input
         name="name"
@@ -111,7 +111,7 @@
       </button>
       <p class="text-base text-dark my-4">
         <span>Already have an account.&nbsp; </span>
-        <a href="/login" class="text-blue" type="button"><u>Login</u></a>
+        <a href="./login" class="text-blue" type="button"><u>Login</u></a>
         
       </p>
       </form>

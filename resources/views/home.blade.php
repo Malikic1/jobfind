@@ -8,6 +8,10 @@
     @vite('resources/css/app.css')
 </head>
 <body>
+
+
+
+  
     <header id="header" class="w-full shadow1 fixed z-20 flex bg-smoke md:bg-blue justify-between px-2 md:px-4 emd:px-8 py-4">
     <div>
       <h2
@@ -24,18 +28,34 @@
         class="flex flex-col gap-y-4 md:gap-y-0 md:flex-row pl-6 md:pl-0 text-base text-blue md:text-whitesmoke"
       >
         <li class="mr-4 font-bold"><a href="">Home</a></li>
-        <li class="mr-4"><a href=""></a></li>
-        <li class="mr-4"><a href=""></a></li>
+        <li class="mr-4"><a href=""></a>Job</li>
+        <li class="mr-4"><a href=""></a>Profile</li>
         <li class="mr-4"><a href="">About</a></li>
         <li class="mr-4"><a href="">Contact</a></li>
       </ul>
     </div>
-    <div>
-        <input type="text" class="px-2 py-1">
-      <button
-        class="bg-trans md:bg-whitesmoke text-bluesmoke px-2 py-1 rounded font-bold text-base">
-       <i class="fa-solid fa-magnify"></i>Search
-      </button>
+    <div class="flex gap-x-2">
+      <form action=""></form>
+          <input type="text" class=" w-48 px-2 py-1">
+        <button
+          class="bg-trans z-10 -ml-3 md:bg-whitesmoke text-bluesmoke px-2 py-1 rounded font-bold text-base">
+        <i class="fa-solid fa-magnify"></i>Search
+        </button>
+      </form>
+      
+    @auth
+      <form action="/logout" method="post">
+        @csrf
+          <button
+              class="bg-trans md:bg-whitesmoke text-bluesmoke px-2 py-1 rounded font-bold text-base">
+            <i class="fa-solid fa-magnify"></i>Logout
+          </button>
+        </form>     
+    @else
+
+    @endauth 
+    
+     
     </div>
     <button
       id="menu_btn"
@@ -45,24 +65,38 @@
     </button>
   </header>
     <main class="absolute top-24 w-full">
-        <div class="bg-blue text-light w-100 text-center py-24">
-            <h2 class="text-4xl font-bold text-cyan">Get Employed Today <span class="text-whitesmoke">with  JobFind</span> </h2>
+  
+        <div class="bg-whitesmoke text-darkgrey w-100 text-center py-16">
+          @auth
+          <h2 class="text-4xl font-bold text-cyan">Hi Malik, </h2>
+            @else
+            {{''}}
+            @endauth
+
+            <h2 class="text-4xl font-bold text-darkgrey">Get Employed <span class="text-cyan">Today with  JobFind</span> </h2>
             <p class="w-3/4 m-auto text-xl mt-4">Empower your career journey with JobFind, where opportunities meet ambition, seamlessy. Discover your next move effortlessly, with JobFind's intuitive platform design to match talent with the perfect 
             job opportunities </p>
-            <button class=" mt-6 bg-trans md:bg-whitesmoke text-bluesmoke px-6 py-2 rounded font-bold text-lg"
+            @auth
+              {{''}}
+            @else
+
+            @endauth
+            <button class=" mt-6 bg-trans border-2 border-blue text-blue px-6 py-2 rounded font-bold text-lg"
             >Join Us </button>
         </div>
         <section class=" my-12 px-2">
             <h2 class="text-2xl mb-6">Find Job!</h2>
-            <div class="grid">
-                <div class="w-72 bg-trans p-3">
-                    <img src="" alt="" class="h-24">
-                    <h2 class="text-2xl text-bold">MERN Stack Developer</h2>
-                    <p class="text-darkgrey mt-2 text-lg">SKL Group.</p>
-                    <p class="mt-2"><mark class="px-2 py-1 rounded bg-light text-darkgrey">$400 - $700 a month</mark></p>
-                    <p class="mt-2"><mark class="px-2 py-1 rounded bg-light text-darkgrey">Remote</mark></p>
-                    <p class="mt-2 text-base mt-3">Posted 3days ago</p>
-                </div>
+            <div class="grid grid-cols-3 gap-y-2">
+            @foreach ($jobs as $job)
+            <div class="w-72 bg-trans m-auto p-4">
+              <h2 class="text-2xl text-bold text-cyan">{{$job['title']}}</h2>
+              <p class="text-darkgrey mt-2 text-lg">{{$job['company']}}</p>
+              <p class="mt-2"><mark class="px-2 py-1 rounded bg-light text-darkgrey">{{$job['salary']}} a month</mark></p>
+              <p class="mt-2"><mark class="px-2 py-1 rounded bg-light text-darkgrey">{{$job['category']}}</mark></p>
+              <p class="mt-2 text-base mt-3">Posted <span class='text-sm'>{{$job['updated_at']}}</span></p>
+          </div>  
+            @endforeach
+              
             </div>
         </section>    
     </main>
