@@ -100,6 +100,7 @@
               <section>
                 <form action="./delete/{{$job->id}}" method="post">
                   @csrf
+                  @method('DELETE')
                   <button
                       class="bg-cyan text-light border-cyan border-2 px-4 py-1 rounded font-semibold text-sm">
                   <i class="fa-solid fa-trash"></i>Delete

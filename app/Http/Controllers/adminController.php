@@ -21,6 +21,12 @@ class adminController extends Controller
         return redirect('admin_area/home');
     }
 
+    public function deleteJob(Job $job){
+        $job->delete();
+        return redirect('admin_area/home');
+    }
+
+
     public function new(Request $request) {
         $incomingData = $request -> validate(
             [
