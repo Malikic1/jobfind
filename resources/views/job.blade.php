@@ -24,7 +24,7 @@
           <ul
             class="flex flex-col gap-y-4 md:gap-y-0 md:flex-row pl-6 md:pl-0 text-base text-cyan"
           >
-            <li class="mr-4 font-bold"><a href="">Home</a></li>
+            <li class="mr-4 font-bold"><a href="/">Home</a></li>
             <li class="mr-4"><a href=""></a>Job</li>
             <li class="mr-4"><a href=""></a>Profile</li>
             <li class="mr-4"><a href="">About</a></li>
@@ -94,7 +94,7 @@
             </div>       
         </div> 
     </main>
-    <footer class="bg-blue py-4 mt-12">
+    <footer class="bg-cyan py-4 mt-12">
         <p class="text-center text-whitesmoke">
           © 2024 AzeezCode. All rights reserved.
         </p>

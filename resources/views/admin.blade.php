@@ -13,7 +13,7 @@
       <h2
         class="courier ml-10 text-cyan mt-1 md:ml-0 text-xl font-bold"
       >
-        <i>JobFind</i>
+        JobFind
       </h2>
     </div>
     <div
@@ -21,7 +21,7 @@
       class="bg-trans hidden md:block md:bg-blue mt-12 md:mt-0 absolute md:relative left-6 md:left-0"
     >
       <ul
-        class="flex flex-col gap-y-4 md:gap-y-0 md:flex-row pl-6 md:pl-0 text-base text-blue md:text-whitesmoke"
+        class="flex flex-col gap-y-4 md:gap-y-0 md:flex-row pl-6 md:pl-0 text-base text-whitesmoke"
       >
         
           <li class="mr-4 font-bold"><a href="">Home</a></li>
@@ -34,7 +34,7 @@
       <form action="/logout" method="post">
         @csrf
           <button
-              class="bg-trans md:bg-whitesmoke text-bluesmoke px-2 py-1 rounded font-bold text-base">
+              class="bg-trans text-blue px-2 py-1 rounded font-bold text-base">
             <i class="fa-solid fa-magnify"></i>Logout
           </button>
         </form>     
@@ -60,14 +60,14 @@
   </header>
     <main class="absolute top-24 w-full">
   
-        <div class="bg-whitesmoke text-darkgrey w-100 text-center py-16">
+        <div class="bg-cyan text-whitesmoke w-100 text-center py-16">
           @auth
           <h2 class="text-4xl font-bold text-cyan">Hi Malik, </h2>
             @else
             {{''}}
             @endauth
 
-            <h2 class="text-4xl font-bold text-darkgrey">Get Employed <span class="text-cyan">Today with  JobFind</span> </h2>
+            <h2 class="text-4xl font-bold text-darkgrey">Get Employed <span class="text-blue">Today with  JobFind</span> </h2>
             <p class="w-3/4 m-auto text-xl mt-4">Empower your career journey with JobFind, where opportunities meet ambition, seamlessy. Discover your next move effortlessly, with JobFind's intuitive platform design to match talent with the perfect 
             job opportunities </p>
             <h2 class="text-2xl mt-6 text-center text-cyan">Strictly Administrative Portal</h2>

@@ -36,9 +36,9 @@
     </div>
     <div class="flex gap-x-2">
       <form action=""></form>
-          <input type="text" class=" w-48 px-2 py-1">
+          <input type="text" class="w-48 px-2 py-1">
         <button
-          class="bg-trans z-10 -ml-3 text-cyan pl-4 pr-2 py-1 rounded font-bold text-base">
+          class="bg-cyan z-10 -ml-3 text-light pl-4 pr-2 py-1 font-bold text-base">
         <i class="fa-solid fa-magnify"></i>Search
         </button>
       </form>
@@ -89,7 +89,7 @@
             @endauth
                    </div>
         <section class=" my-12 px-2">
-            <h2 class="text-2xl mb-6">Find Job!</h2>
+            <h2 class="text-center text-2xl mb-6">Recently Updated Job!</h2>
             <div class="grid grid-cols-3 gap-y-4">
             @foreach ($jobs as $job)
             <div class="w-72 bg-trans m-auto p-4" 

@@ -40,10 +40,11 @@ Route::get('/job/{job}', function (Job $job) {
     return view('job', ['job' => $job]);   
 });
 
-Route::get('/application/{job}', function () {
+Route::get('/application/{job}', function (Job $job) {
     $user = Auth::user();
     return view('application', [
-        'user'=>  $user
+        'user'=>  $user,
+        'job' => $job
     ]);
 });
 

@@ -34,44 +34,14 @@
     </style>
   </head>
   <body class="text-trans">
-    <header id="header" class="top-0 w-full fixed z-20 flex bg-smoke md:bg-blue justify-between px-2 md:px-4 emd:px-8 py-4">
-        <div>
-        <h2
-            class="courier ml-10 text-blue md:text-darkgrey mt-1 md:ml-0 text-xl font-bold"
-        >
-            <i>JobFind</i>
-        </h2>
-        </div>
-        <div
-        id="nav"
-        class="bg-trans hidden md:block md:bg-blue mt-12 md:mt-0 absolute md:relative left-6 md:left-0"
-        >
-        <ul
-            class="flex flex-col gap-y-4 md:gap-y-0 md:flex-row pl-6 md:pl-0 text-base text-blue md:text-whitesmoke"
-        >
-            <li class="mr-4 font-bold"><a href="/">Home</a></li>
-            <li class="mr-4"><a href="/about">About</a></li>
-            <li class="mr-4"><a href="/contact">Contact</a></li>
-        </ul>
-        </div>
-        <div>
-        <p
-            class="bg-whitesmoke text-blue px-3 py-1 rounded-full font-semibold text-base">
-        Welcome
-        </p>
-        </div>
-        <button
-        id="menu_btn"
-        class="block md:hidden absolute text-darkgrey px-2 py-1 rounded"
-        >
-        <i class="fa-solid fa-bars-staggered text-xl"></i>
-        </button>
-    </header>
-    <main class="mt-32 px-2">
+    <main class="mt-12 px-2">
+      <h2 class="courier ml-10 text-cyan mt-1 text-center md:ml-0 text-2xl font-bold">
+        JobFind
+     </h2>
       <form
         method="post"
         action="/signin"
-        class="w-80 border-2 border-blue p-4 text-center ml-auto mr-auto rounded-xl"
+        class="w-80 mt-12 border-2 border-blue p-4 text-center ml-auto mr-auto rounded-xl"
       >
       @csrf
         <h1 class="font-semibold text-xl text-blue">Admin Login</h1>
@@ -101,10 +71,10 @@
         </p>
         <p class="flex text-darkgrey justify-between text-sm mt-3">
           <span><input type="checkbox" /> Remember me</span>
-          <span><a href="" class="text-blue">Forgot Password</a></span>
+          <span><a href="" class="text-cyan">Forgot Password</a></span>
         </p>
         <button
-          class="text-light bg-blue w-full rounded-2xl font-bold mt-3 py-1 text-md"
+          class="text-light bg-cyan w-full rounded-2xl font-bold mt-3 py-1 text-md"
           type="submit"
         >
           Log in

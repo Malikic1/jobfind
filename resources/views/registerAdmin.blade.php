@@ -15,44 +15,14 @@
     <title>crypto</title>
   </head>
   <body class="bg-trans">
-    <header id="header" class="top-0 w-full fixed z-20 flex bg-smoke md:bg-blue justify-between px-2 md:px-4 emd:px-8 py-4">
-        <div>
-        <h2
-            class="courier ml-10 text-blue md:text-darkgrey mt-1 md:ml-0 text-xl font-bold"
-        >
-            <i>JobFind</i>
-        </h2>
-        </div>
-        <div
-        id="nav"
-        class="bg-trans hidden md:block md:bg-blue mt-12 md:mt-0 absolute md:relative left-6 md:left-0"
-        >
-        <ul
-            class="flex flex-col gap-y-4 md:gap-y-0 md:flex-row pl-6 md:pl-0 text-base text-blue md:text-whitesmoke"
-        >
-            <li class="mr-4 font-bold"><a href="/">Home</a></li>
-            <li class="mr-4"><a href="/about">About</a></li>
-            <li class="mr-4"><a href="/contact">Contact</a></li>
-        </ul>
-        </div>
-        <div>
-        <p
-            class="bg-whitesmoke text-blue px-3 py-1 rounded-full font-bold text-base">
-            Welcome
-        </p>
-        </div>
-        <button
-        id="menu_btn"
-        class="block md:hidden absolute text-darkgrey px-2 py-1 rounded"
-        >
-        <i class="fa-solid fa-bars-staggered text-xl"></i>
-        </button>
-    </header>
-     <main class="mt-24 px-2">
+     <main class="mt-12 px-2">
+      <h2 class="courier ml-10 text-cyan mt-1 text-center md:ml-0 text-2xl font-bold">
+        JobFind
+     </h2>
       <form
       method="POST"
         action="/sign_up"
-        class="px-4 w-80 px-4 border-blue border-2 text-center p-4 m-auto  rounded-xl"
+        class="px-4 mt-12 w-80 px-4 border-blue border-2 text-center p-4 m-auto  rounded-xl"
       >
       @csrf
       <h1 class="font-semibold text-xl text-blue">Admin Register</h1>
@@ -105,7 +75,7 @@
       </p>
       <button
         type="submit"
-        class="text-light bg-blue w-full rounded-2xl font-bold mt-3 py-1 text-md"
+        class="text-light bg-cyan w-full rounded-2xl font-bold mt-3 py-1 text-md"
       >
         Register
       </button>
